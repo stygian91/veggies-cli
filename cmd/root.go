@@ -7,8 +7,8 @@ import (
 )
 
 var rootCmd = &cobra.Command{
-	Use:   "veggies",
-	Short: "Veggies is a web framework",
+	Use:   "veggies-cli",
+	Short: "veggies-cli is a cli utility for the veggies web framework",
 	Long:  ``,
 }
 

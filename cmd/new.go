@@ -24,7 +24,7 @@ var newCmd = &cobra.Command{
 	Short: "Create a new project with veggies",
 	Long:  ``,
 	Run: func(cmd *cobra.Command, args []string) {
-		if err := run(args[0]); err != nil {
+		if err := runNew(args[0]); err != nil {
 			fmt.Printf("Error while running `new` command: %s\n", err)
 		}
 	},
@@ -58,7 +58,7 @@ func runTidy(name string) (string, error) {
 
 // TODO:
 // maybe add options for db drivers
-func run(name string) error {
+func runNew(name string) error {
 	fmt.Println("Creating files and directories...")
 
 	subfs, err := fs.Sub(templates.Templates, "data")
